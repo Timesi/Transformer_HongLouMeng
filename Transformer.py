@@ -73,6 +73,7 @@ def estimate_loss(model):  # 不做梯度计算的decorator,作用域为整个�
     return out
 
 
+# -------------网络结构-----------------
 # Head类
 class Head(nn.Module):
     def __init__(self, head_size):
@@ -112,6 +113,7 @@ class MultiHeadAttention(nn.Module):
         return out
 
 
+# 前馈网络
 class FeedForward(nn.Module):
     def __init__(self, n_embd):
         super().__init__()
